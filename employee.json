@@ -14,4 +14,44 @@
   "phone" : "5511978896541",
   "imageUrl" : "https://bootdey.com/img/Content/avatar/avatar3.png",
   "employeeCode" : "57ce8577-2fca-4a00-a35f-1c16b6e4485f"
+}, {
+  "id" : 52,
+  "name" : "jojo de Almeida",
+  "email" : "jojo@hotmail.com",
+  "jobTitle" : "UI",
+  "phone" : "5511978896541",
+  "imageUrl" : "https://bootdey.com/img/Content/avatar/avatar3.png",
+  "employeeCode" : "bcf225ad-06ce-433a-92cf-a44917396f6d"
+}, {
+  "id" : 53,
+  "name" : "Gira de Almeida",
+  "email" : "gira@hotmail.com",
+  "jobTitle" : "UI",
+  "phone" : "5511978896541",
+  "imageUrl" : "https://bootdey.com/img/Content/avatar/avatar3.png",
+  "employeeCode" : "9560ef86-af83-4458-943b-004ad58c2a84"
+}, {
+  "id" : 54,
+  "name" : "Gira de Almeida",
+  "email" : "gira@hotmail.com",
+  "jobTitle" : "UI",
+  "phone" : "5511978896541",
+  "imageUrl" : "https://bootdey.com/img/Content/avatar/avatar3.png",
+  "employeeCode" : "c557bcef-923a-4635-9dc8-6432746deed5"
+}, {
+  "id" : 55,
+  "name" : "jao de Almeida",
+  "email" : "jao@hotmail.com",
+  "jobTitle" : "UI",
+  "phone" : "5511978896541",
+  "imageUrl" : "https://bootdey.com/img/Content/avatar/avatar3.png",
+  "employeeCode" : "a4de25ea-e0b0-4f36-8882-72ad6322a330"
+}, {
+  "id" : 56,
+  "name" : "jao de Almeida",
+  "email" : "jao@hotmail.com",
+  "jobTitle" : "UI",
+  "phone" : "5511978896541",
+  "imageUrl" : "https://bootdey.com/img/Content/avatar/avatar3.png",
+  "employeeCode" : "8d157920-fe25-4b39-a52a-93227584e1dc"
 } ]

@@ -1,4 +1,4 @@
-# employeemanager
+# Employeemanager api
 
 This is the README file for the `employeemanager` project.
 
@@ -16,7 +16,7 @@ To install and run the `employeemanager` project api, follow these steps:
 4. If you are in Intellij IDEA, just hit the play green button.
 
 ## Usage
-
+```
 Once the API is running, you can access it by opening Insominia or using HTTPie in terminal.
 To use Insominia, download it from: https://insomnia.rest/
 To use HTTPie, download it from: https://httpie.io/cli
@@ -34,7 +34,10 @@ POST http://localhost:8080/employee/add - adding the JSON text
 PUT http://localhost:8080/employee/update - adding the JSON text + the proper id to update
 DELETE http://localhost:8080/employee/delete/{id} - {id} = a number, like 55
 GET http://localhost:8080/employee/export - it will export all employees to a file in root of the project, named employee.json
+```
+Diagrama API:
 
+![Diagrama API](https://github.com/LuizCampedelli/employeemanager/assets/108758747/fb42fdab-37d6-4390-904e-62a871361676)
 
 
 ## Contributing

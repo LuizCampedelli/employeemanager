@@ -1,0 +1,17 @@
+[ {
+  "id" : 1,
+  "name" : "Jay Jay da Silva",
+  "email" : "jj@gmail.com",
+  "jobTitle" : "Java Backend",
+  "phone" : "552197865642",
+  "imageUrl" : "https://bootdey.com/img/Content/avatar/avatar5.png",
+  "employeeCode" : "c4aa5d7a-c4f5-4414-b945-890fad52cd57"
+}, {
+  "id" : 2,
+  "name" : "Greyson de Almeida",
+  "email" : "johnson@hotmail.com",
+  "jobTitle" : "UI",
+  "phone" : "5511978896541",
+  "imageUrl" : "https://bootdey.com/img/Content/avatar/avatar3.png",
+  "employeeCode" : "57ce8577-2fca-4a00-a35f-1c16b6e4485f"
+} ]

@@ -5,16 +5,29 @@ import com.employeemanager.app.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.io.File;
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Value;
 
 @RestController
 @RequestMapping("/employee")
 public class EmployeeResource {
     private final EmployeeService employeeService;
+    private final ObjectMapper objectMapper;
 
-    public EmployeeResource(EmployeeService employeeService) {
+    @Value("${employee.export.filepath}")
+    private String exportFilePath;
+
+    public EmployeeResource(EmployeeService employeeService, ObjectMapper objectMapper) {
         this.employeeService = employeeService;
+        this.objectMapper = objectMapper;
     }
 
     @GetMapping("/all")
@@ -46,4 +59,29 @@ public class EmployeeResource {
         employeeService.deleteEmployee(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
+    @GetMapping("/export")
+    public ResponseEntity<Void> exportEmployeesToJson(@RequestParam(value = "filename", required = false) String filename) {
+        List<Employee> employees = employeeService.findAllEmployees();
+
+        try {
+            // Create ObjectWriter with pretty-printing enabled
+            ObjectWriter writer = objectMapper.writer().with(SerializationFeature.INDENT_OUTPUT);
+
+            // If filename parameter is not provided, use a default filename
+            if (StringUtils.isEmpty(filename)) {
+                filename = "employee.json";
+            }
+
+            // Write JSON data to file with the provided filename
+            File file = new File(filename);
+            writer.writeValue(file, employees); // Use writer instead of objectMapper
+
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }

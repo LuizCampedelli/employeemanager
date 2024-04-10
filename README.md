@@ -136,10 +136,15 @@ To use HTTPie, download it from: https://httpie.io/cli
 
 
 
-# Diagrama API:
+# API Diagram:
 
 
 ![Diagram - Emplyee Manager API drawio](https://github.com/LuizCampedelli/employeemanager/assets/108758747/d461cadf-5532-478d-af13-b4b90d530e8e)
+
+
+# AWS high availability scenario - Deploy:
+
+![AWS EBS ALB ASG HA](https://github.com/LuizCampedelli/employeemanager/assets/108758747/58828691-0304-43dc-b22e-31ed2de640f7)
 
 
 ## Contributing

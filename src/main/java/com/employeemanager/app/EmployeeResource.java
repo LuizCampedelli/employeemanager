@@ -69,15 +69,12 @@ public class EmployeeResource {
         List<Employee> employees = employeeService.findAllEmployees();
 
         try {
-            // Create ObjectWriter with pretty-printing enabled
             ObjectWriter writer = objectMapper.writer().with(SerializationFeature.INDENT_OUTPUT);
 
-            // If filename parameter is not provided, use a default filename
             if (StringUtils.isEmpty(filename)) {
                 filename = "employee.json";
             }
 
-            // Write JSON data to file with the provided filename
             File file = new File(filename);
             writer.writeValue(file, employees); // Use writer instead of objectMapper
 
